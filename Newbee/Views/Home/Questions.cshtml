@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "做题";
+}
+
+<div class="ques-main">
+    <div class="question">
+        
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    var cur_data = {
+        index: 0
+    }
+
+
+    var GetQuestion = function () {
+        var i = cur_data.index + 1;
+
+        $.post("GetQuestion",
+            { quesIndex: i },
+            function (data) {
+                $(".question").html(data);
+
+                cur_data.index = i;
+            })
+        
+    }
+
+    GetQuestion();
+
+</script>

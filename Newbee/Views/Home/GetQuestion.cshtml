@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "GetQuestion";
+}
+@using Newbee.Models;
+@{var model = Model as M_Question;}
+
+<div class="ques-count">@(ViewBag.QuesIndex) / @(ViewBag.QuesCount)</div>
+@if(model != null)
+{ 
+
+<div class="ques-num">@(model.Num)</div>
+<div class="ques-content">@(model.Content)</div>
+
+if (model.Options.Count != 0)
+{
+<div class="ques-options">
+    @foreach(var qo in model.Options)
+    { 
+    <div class="ques-option">
+        <div class="option-num">@(qo.Num)</div>
+        <div class="option-content">@(qo.Content)</div>
+    </div>
+    }
+    
+</div>
+}
+}
