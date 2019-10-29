@@ -44,7 +44,7 @@
                         //加载loading1秒后跳到结果页
                         $('body').prepend('<div class="shade fixed1"></div>');
                         $(".st-roster").show();
-                        setTimeout(ShowResult, 3000)
+                        setTimeout(ShowResult, 1000)
                         
                     }
                 })
@@ -52,13 +52,15 @@
     }
 
     var ShowResult = function () {
-        alert(1);
-        //var ans = answers.push(",");
-        //$.post("ShowResult",
-        //    { answer: ans },
-        //    function (data) {
-        //        $(".question").html(data);
-        //    })
+        $(".st-roster").hide();
+        $(".shade").hide();
+
+        var ans = answers.push(",");
+        $.post("ShowResult",
+            { answer: ans },
+            function (data) {
+                $(".question").html(data);
+            })
     }
 
     GetQuestion();

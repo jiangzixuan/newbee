@@ -147,6 +147,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\loader.gif" />
+    <Content Include="Images\result_background.png" />
     <Content Include="Images\t_lun.png" />
     <Content Include="Images\t_title.png" />
     <Content Include="Images\t_tv.png" />
