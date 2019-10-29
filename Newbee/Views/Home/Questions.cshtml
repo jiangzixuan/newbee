@@ -4,19 +4,25 @@
 
 <div class="ques-main">
     <div class="question">
-        
+
 
     </div>
-
+</div>
+<div class="st-roster">
+    <img src="~/Images/loader.gif"/>
 </div>
 
 <script type="text/javascript">
 
+    //页面用到的变量
     var cur_data = {
         index: 0
     }
 
+    //提交的答案
+    var answers = [];
 
+    //显示试题，显示完成修改cur_data.index
     var GetQuestion = function () {
         var i = cur_data.index + 1;
 
@@ -26,10 +32,37 @@
                 $(".question").html(data);
 
                 cur_data.index = i;
+
+                $(".option-content").on("click", function () {
+                    answers.push($(this).attr("data-bind"));
+
+                    //如果是最后一题，显示成绩；否则显示下一题
+                    if ($(".CurrentIndex").html() != $(".QuesCount").html()) {
+                        GetQuestion();
+                    }
+                    else {
+                        //加载loading1秒后跳到结果页
+                        $('body').prepend('<div class="shade fixed1"></div>');
+                        $(".st-roster").show();
+                        setTimeout(ShowResult, 3000)
+                        
+                    }
+                })
             })
-        
+    }
+
+    var ShowResult = function () {
+        alert(1);
+        //var ans = answers.push(",");
+        //$.post("ShowResult",
+        //    { answer: ans },
+        //    function (data) {
+        //        $(".question").html(data);
+        //    })
     }
 
     GetQuestion();
+
+    
 
 </script>

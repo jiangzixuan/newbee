@@ -31,5 +31,12 @@ namespace Newbee.Controllers
             ViewBag.QuesCount = ql.Count;
             return View(q);
         }
+
+        public ActionResult ShowResult(string answer)
+        {
+            string[] answers = answer.Split(',');
+
+            return View();
+        }
     }
 }

@@ -4,12 +4,11 @@
 @using Newbee.Models;
 @{var model = Model as M_Question;}
 
-<div class="ques-count">@(ViewBag.QuesIndex) / @(ViewBag.QuesCount)</div>
+<div class="ques-count center"><label class="CurrentIndex">@(ViewBag.QuesIndex)</label> / <label class="QuesCount">@(ViewBag.QuesCount)</label></div>
 @if(model != null)
 { 
 
-<div class="ques-num">@(model.Num)</div>
-<div class="ques-content">@(model.Content)</div>
+<div class="ques-content">@(model.Num). @(model.Content)</div>
 
 if (model.Options.Count != 0)
 {
@@ -17,8 +16,7 @@ if (model.Options.Count != 0)
     @foreach(var qo in model.Options)
     { 
     <div class="ques-option">
-        <div class="option-num">@(qo.Num)</div>
-        <div class="option-content">@(qo.Content)</div>
+        <div class="option-content" data-bind="@(model.Num)_@(qo.Num)">@(qo.Num). @(qo.Content)</div>
     </div>
     }
     
