@@ -9,7 +9,11 @@
         <div class="result-title center">某某某的测评报告</div>
         <div class="result-body">
             <div class="result-img"></div>
-            <div style="float:right;color: #fff; font-size: 0.5em;position:absolute; right:60px; bottom:22px;">长按二维码，查看您的测评报告</div>
+            <div style="float:right;color: #fff; font-size: 0.5em;position:absolute; right:60px; bottom:100px;" class="answers">
+                
+
+            </div>
+            <div class="erweima_tip">长按二维码，查看您的测评报告</div>
             <div class="erweima"></div>
         </div>
     </div>
@@ -20,3 +24,20 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    var answers = '@ViewBag.Answers';
+
+    var ShowAnswers = function () {
+        var as = answers.split(',');
+        for (var i = 0; i < as.length; i++) {
+            var a = as[i].split("_");
+            $(".answers").append("<p>第" + a[0] + "题，选择了" + a[1] + "</p>");
+        }
+
+        $(".answers").append("<p>根据回答显示不同结果的业务逻辑未实现；</p>");
+        $(".answers").append("<p>长按识别二维码功能只能微信中打开才能用；</p>");
+    }
+
+    ShowAnswers();
+
+</script>

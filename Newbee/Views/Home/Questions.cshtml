@@ -55,7 +55,7 @@
         $(".st-roster").hide();
         $(".shade").hide();
         
-        var ans = answers.push(",");
+        var ans = answers.join(",");
         $.post("ShowResult",
             { answer: ans },
             function (data) {

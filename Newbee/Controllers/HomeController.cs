@@ -34,8 +34,8 @@ namespace Newbee.Controllers
 
         public ActionResult ShowResult(string answer)
         {
-            string[] answers = answer.Split(',');
-
+            //string[] answers = answer.Split(',');
+            ViewBag.Answers = answer;
             return View();
         }
     }

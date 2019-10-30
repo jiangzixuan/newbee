@@ -3,7 +3,7 @@
   <ques>
     <num>1</num>
     <content>下图中，你第一眼看到的是什么？</content>
-    <pic></pic>
+    <pic>/images/q1.png</pic>
     <point>1</point>
     <options>
       <option>
@@ -21,7 +21,7 @@
   <ques>
     <num>2</num>
     <content>你认为哪个标题最适合描述下面这张图？</content>
-    <pic></pic>
+    <pic>/images/q2.png</pic>
     <point>2</point>
     <options>
       <option>
@@ -77,7 +77,7 @@
   <ques>
     <num>4</num>
     <content>凭感觉选出与瞄准器里面颜色相同的第一种颜色？</content>
-    <pic></pic>
+    <pic>/images/q4.png</pic>
     <point>4</point>
     <options>
       <option>

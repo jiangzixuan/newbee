@@ -22,7 +22,7 @@ a{text-decoration: none;}
 .home-main .foot{margin-top:2em;}
 
 .ques-main{width: 100vw;height:100vh;position: relative;background:#ffffff;}
-.ques-main .question{font-size: 1em;width: 92vw;height: 90vh;padding: 10vh 4vw 0 4vw;}
+.ques-main .question{font-size: 1em;width: 92vw;height: 94vh;padding: 6vh 4vw 0 4vw;}
 .ques-main .question .ques-count{}
 .ques-main .question .ques-content{margin-top:2em; font-size:50%;}
 .ques-main .question .ques-option{margin-top:2em; font-size:50%;}
@@ -35,6 +35,7 @@ a{text-decoration: none;}
 
 .ques-main  .result .result-body .result-img{background:url("/Images/result_background.png"); width:90vw; height:70vh}
 .ques-main  .result .result-body .erweima{background:url("/Images/erweima.png") no-repeat ; width:50px; height:50px; position:fixed; right:5px; bottom:5px; position:absolute; }
+.ques-main  .result .result-body .erweima_tip{float:right;color: #fff; font-size: 0.5em;position:absolute; right:60px; bottom:22px;}
 .ques-main  .result .result-foot{font-size:50%;}
 .ques-main  .result .result-foot .share{color:#fff;}
 .ques-main  .result .result-foot .total{color:#fff; background-color:#333;border-radius:0.3em;}
