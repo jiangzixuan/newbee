@@ -54,12 +54,14 @@
     var ShowResult = function () {
         $(".st-roster").hide();
         $(".shade").hide();
-
+        
         var ans = answers.push(",");
         $.post("ShowResult",
             { answer: ans },
             function (data) {
-                $(".question").html(data);
+                //$(".question").html(data);
+                $(".question").hide();
+                $(".ques-main").append(data);
             })
     }
 
